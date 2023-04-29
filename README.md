@@ -8,7 +8,7 @@ We are then able to set up a launch date, provide a mission name, rocket type an
 
 With this simple data entry application that is built with Node.js, Express Framework, RESTful APIs (GraphQL coming soon) and React for the front end, you are able to input a launch date to an exoplanet, view upcoming and past missions. 
 
-> This is not an official site and is not affliated with NASA or SpaceX in any way.
+This is not an official site and is not affliated with NASA or SpaceX in any way.
 
 Why MongoDB? 
 
