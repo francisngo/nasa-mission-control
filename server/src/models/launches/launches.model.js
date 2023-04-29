@@ -16,8 +16,6 @@ const launch = {
 launches.set(launch.flightNumber, launch);
 
 function existsLaunchWithId(launchId) {
-	console.log("launchId: ", launchId);
-	console.log("map: ", launches);
 	return launches.has(launchId);
 }
 
