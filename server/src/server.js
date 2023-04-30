@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 8080;
 
 const server = http.createServer(app);
 
-async function startServer() {
+(async () => {
 	await mongoConnect();
 	await loadPlanetsData();
 	await loadLaunchesData();
@@ -17,6 +17,4 @@ async function startServer() {
 	server.listen(PORT, () => {
 		console.log(`Listening on port ${PORT}...`);
 	});
-}
-
-startServer();
+})();
