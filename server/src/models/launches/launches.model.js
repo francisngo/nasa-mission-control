@@ -61,7 +61,6 @@ async function populateLaunches() {
 			customers,
 		};
 
-		console.log(`${launch.flightNumber} ${launch.mission}`);
 		await saveLaunch(launch);
 	}
 }
@@ -69,7 +68,7 @@ async function populateLaunches() {
 async function loadLaunchesData() {
 	const firstLaunch = await findLaunch({
 		flightNumber: 1,
-		rocket: "Falcon-1",
+		rocket: "Falcon 1",
 		mission: "FalconSat",
 	});
 	if (firstLaunch) {
@@ -87,8 +86,8 @@ async function existsLaunchWithId(launchId) {
 	return await findLaunch(launchId);
 }
 
-async function getLaunches() {
-	return await launches.find({}, { _id: 0, __v: 0 });
+async function getLaunches(skip, limit) {
+	return await launches.find({}, { _id: 0, __v: 0 }).skip(skip).limit(limit);
 }
 
 async function getLatestFlightNumber() {
